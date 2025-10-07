@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silas - Portafolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e0e10;
+      --text: #e4e4e7;
+      --accent: #3b82f6;
+      --card-bg: #18181b;
+      --muted: #a1a1aa;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 20px 80px;
+      background: linear-gradient(180deg, #111, #0e0e10);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 1.2rem;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(14,14,16,0.8);
+      backdrop-filter: blur(10px);
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: var(--accent);
+    }
+
+    #about p {
+      text-align: center;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: auto;
+      color: var(--muted);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    .project-card p {
+      color: var(--muted);
+    }
+
+    .project-card a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid var(--accent);
+      padding: 8px 12px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 10px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .project-card a:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .skill {
+      background: var(--card-bg);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: 1px solid #2d2d31;
+      transition: background 0.3s;
+    }
+
+    .skill:hover {
+      background: #1f1f22;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid #222;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">Sobre mí</a>
+    <a href="#projects">Proyectos</a>
+    <a href="#skills">Habilidades</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+
+  <header>
+    <h1>Silas</h1>
+    <p>Programador Junior | Apasionado por Python y desarrollo web</p>
+  </header>
+
+  <section id="about">
+    <h2>Sobre mí</h2>
+    <p>Soy un programador junior con experiencia en Python, HTML, CSS y JavaScript. Me gusta construir proyectos que combinen lógica y diseño limpio. Mi objetivo es seguir creciendo como desarrollador full stack y aportar soluciones de valor en cada proyecto.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Proyectos</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Gestor de Tareas</h3>
+        <p>Aplicación web desarrollada en Python + Flask que permite crear, editar y eliminar tareas, con base de datos SQLite y diseño responsive.</p>
+        <a href="https://github.com/tuusuario/gestor-tareas" target="_blank">Ver en GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>API de Finanzas</h3>
+        <p>API REST para gestión de gastos y presupuestos personales usando FastAPI y PostgreSQL.</p>
+        <a href="https://github.com/tuusuario/api-finanzas" target="_blank">Ver en GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Portafolio Web</h3>
+        <p>Este mismo sitio, construido con HTML, CSS y una pizca de JavaScript. Minimalista y directo.</p>
+        <a href="https://github.com/tuusuario/portafolio" target="_blank">Ver en GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Habilidades</h2>
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Flask</div>
+      <div class="skill">FastAPI</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">SQL</div>
+      <div class="skill">GCP</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contacto</h2>
+    <div class="contact">
+      <p>Puedes contactarme por correo o revisar mis perfiles profesionales:</p>
+      <p>
+        <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a> |
+        <a href="https://github.com/tuusuario" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Silas — Desarrollado con pasión y buen café ☕</p>
+  </footer>
+
+</body>
+</html>
